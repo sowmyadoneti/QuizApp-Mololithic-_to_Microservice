@@ -8,16 +8,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.example.question_service.dao.QuestionRepo;
 import com.example.question_service.model.Question;
 import com.example.question_service.model.QuestionWrapper;
 import com.example.question_service.model.Response;
-import com.example.question_service.dao.QuestionRepo;
 
 @Service
 public class QuestionService {
 
 	@Autowired
 	QuestionRepo questionRepo;
+	
+	
 	
 	public ResponseEntity<List<Question>> getAllQuestions() {
 		try {
